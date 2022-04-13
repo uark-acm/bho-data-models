@@ -1,0 +1,16 @@
+{
+  "name": "@uark-acm/bho-data-models",
+  "version": "1.0.0",
+  "description": "package for trying out github package registry",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@uark-acm"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
