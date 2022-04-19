@@ -2,7 +2,7 @@
   "name": "@uark-acm/bho-data-models",
   "version": "1.0.0",
   "description": "data models for bho app",
-  "main": "src/index.ts",
+  "main": "index.ts",
   "scripts": {
     "test": "exit 0",
     "build" : "tsc",
