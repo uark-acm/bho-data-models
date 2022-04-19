@@ -1,16 +1,19 @@
 {
   "name": "@uark-acm/bho-data-models",
   "version": "1.0.0",
-  "description": "package for trying out github package registry",
+  "description": "data models for bho app",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@uark-acm"
-  },
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uark-acm/bho-data-models.git"
+  },
+  "author": "jacktnorris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uark-acm/bho-data-models/issues"
+  },
+  "homepage": "https://github.com/uark-acm/bho-data-models#readme"
 }
