@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/uark-acm/bho-data-models/issues"
   },
-  "homepage": "https://github.com/uark-acm/bho-data-models#readme"
+  "homepage": "https://github.com/uark-acm/bho-data-models#readme",
+  "publishConfig": {
+    "@uark-acm:registry": "https://npm.pkg.github.com"
+  }
 }
