@@ -5,7 +5,9 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "exit 0",
-    "build" : "tsc"
+    "build" : "tsc",
+    "prepare" : "npm run build"
+
   },
   "repository": {
     "type": "git",
