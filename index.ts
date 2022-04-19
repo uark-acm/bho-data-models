@@ -1,20 +1,20 @@
 export enum ClothingType {
-    MENS = 'M',
-    WOMENS = 'W',
-    ACCESSORY = 'A'
+    MENS = 'MENS',
+    WOMENS = 'WOMENS',
+    ACCESSORY = 'ACCESSORY'
 }
 
 export enum ItemCategory {
-    TOP = "T",
-    BOTTOM = "B",
-    SET = "S",
-    FOOTWEAR = "F"
+    TOP = "TOP",
+    BOTTOM = "BOTTOM",
+    SET = "SET",
+    FOOTWEAR = "FOOTWEAR"
 }
 
 export enum Status {
-    PACKED = "P",
-    OUT = "O",
-    RETURNED = "R",
+    PACKED = "PACKED",
+    OUT = "OUT",
+    RETURNED = "RETURNED",
 }
 
 export interface BHOClient {

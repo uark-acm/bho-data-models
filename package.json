@@ -6,6 +6,8 @@
   "scripts": {
     "test": "exit 0",
     "build": "tsc",
+    "version" : "npm run format && git add -A index.ts",
+    "postversion" : "git push && git push --tags",
     "prepare": "npm run build"
   },
   "repository": {
