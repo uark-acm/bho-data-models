@@ -50,6 +50,16 @@ export interface ClothingItem {
   description: string | null;
 }
 
+export interface ClothingItemDatabaseRow {
+    id: number,
+    clothing_item_type: ClothingItemType;
+    clothing_item_category: ClothingItemCategory;
+    clothing_item_status: ClothingItemStatus; // this will indicate if the item is checked out, packed, or just returned
+    clothing_item_condition: ClothingItemCondition;
+    clothing_item_size: string | null;
+    clothing_item_description: string | null;
+}
+
 export const ClothingItemToRow = (clothingItem: ClothingItem): any[] => {
   const row = [
     clothingItem.id,
@@ -63,15 +73,15 @@ export const ClothingItemToRow = (clothingItem: ClothingItem): any[] => {
   return row;
 };
 
-export const RowToClothingItem = (databaseResponse: any[]): ClothingItem => {
+export const DatabaseRowToClothingItem = (databaseResponse: ClothingItemDatabaseRow): ClothingItem => {
   return {
-    id: databaseResponse[0],
-    type: databaseResponse[1] as ClothingItemType,
-    category: databaseResponse[2] as ClothingItemCategory,
-    status: databaseResponse[3] as ClothingItemStatus,
-    condition: databaseResponse[4] as ClothingItemCondition,
-    size: databaseResponse[5] as ClothingItemSize,
-    description: databaseResponse[6],
+    id: databaseResponse.id,
+    type: databaseResponse.clothing_item_type,
+    category: databaseResponse.clothing_item_category,
+    status: databaseResponse.clothing_item_status,
+    condition: databaseResponse.clothing_item_condition,
+    size: databaseResponse.clothing_item_size,
+    description: databaseResponse.clothing_item_description,
   };
 };
 
@@ -85,6 +95,17 @@ export interface Order {
   checkinAssociate: string | null; // will suffice as confirmation
   clothingItemId: number;
 }
+export interface OrderDatabaseRow {
+    id: number;
+    pickup_date_time: Date | null;
+    return_date_time: Date | null;
+    client_name: string;
+    client_email: string;
+    check_out_associate: string | null; // will suffice as confirmation
+    check_in_associate: string | null; // will suffice as confirmation
+    clothing_item_id: number;
+}
+
 export const OrderToRow = (order: Order): any[] => {
   const row = [
     order.id,
@@ -98,16 +119,17 @@ export const OrderToRow = (order: Order): any[] => {
   ];
   return row;
 };
-export const RowToOrder = (databaseResponse: any[]): Order => {
+
+export const DatabaseRowToOrder = (databaseResponse: OrderDatabaseRow): Order => {
   return {
-    id: databaseResponse[0],
-    pickupDateTime: databaseResponse[1] ? new Date(databaseResponse[1]) : null,
-    returnDateTime: databaseResponse[2] ? new Date(databaseResponse[2]) : null,
-    clientName: databaseResponse[3],
-    clientEmail: databaseResponse[4],
-    checkoutAssociate: databaseResponse[5],
-    checkinAssociate: databaseResponse[6],
-    clothingItemId: databaseResponse[7],
+    id: databaseResponse.id,
+    pickupDateTime: databaseResponse.pickup_date_time,
+    returnDateTime: databaseResponse.return_date_time,
+    clientName: databaseResponse.client_name,
+    clientEmail: databaseResponse.client_email,
+    checkoutAssociate: databaseResponse.check_out_associate,
+    checkinAssociate: databaseResponse.check_in_associate,
+    clothingItemId: databaseResponse.clothing_item_id,
   };
 };
 
