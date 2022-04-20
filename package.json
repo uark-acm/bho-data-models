@@ -2,11 +2,11 @@
   "name": "@uark-acm/bho-data-models",
   "version": "1.0.8",
   "description": "data models for bho app",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "exit 0",
     "build": "tsc",
-    "format": "prettier --write \"*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "version": "npm run format && git add -A index.ts",
     "postversion": "git push && git push --tags",
