@@ -1,6 +1,6 @@
 {
   "name": "@uark-acm/bho-data-models",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "data models for bho app",
   "main": "index.ts",
   "scripts": {
@@ -28,5 +28,7 @@
   "devDependencies": {
     "typescript": "^4.6.3"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ]
 }
