@@ -51,13 +51,13 @@ export interface ClothingItem {
 }
 
 export interface ClothingItemDatabaseRow {
-    id: number,
-    clothing_item_type: ClothingItemType;
-    clothing_item_category: ClothingItemCategory;
-    clothing_item_status: ClothingItemStatus; // this will indicate if the item is checked out, packed, or just returned
-    clothing_item_condition: ClothingItemCondition;
-    clothing_item_size: string | null;
-    clothing_item_description: string | null;
+  id: number;
+  clothing_item_type: ClothingItemType;
+  clothing_item_category: ClothingItemCategory;
+  clothing_item_status: ClothingItemStatus; // this will indicate if the item is checked out, packed, or just returned
+  clothing_item_condition: ClothingItemCondition;
+  clothing_item_size: string | null;
+  clothing_item_description: string | null;
 }
 
 export const ClothingItemToRow = (clothingItem: ClothingItem): any[] => {
@@ -96,14 +96,14 @@ export interface Order {
   clothingItemId: number;
 }
 export interface OrderDatabaseRow {
-    id: number;
-    pickup_date_time: Date | null;
-    return_date_time: Date | null;
-    client_name: string;
-    client_email: string;
-    check_out_associate: string | null; // will suffice as confirmation
-    check_in_associate: string | null; // will suffice as confirmation
-    clothing_item_id: number;
+  id: number;
+  pickup_date_time: Date | null;
+  return_date_time: Date | null;
+  client_name: string;
+  client_email: string;
+  check_out_associate: string | null; // will suffice as confirmation
+  check_in_associate: string | null; // will suffice as confirmation
+  clothing_item_id: number;
 }
 
 export const OrderToRow = (order: Order): any[] => {
