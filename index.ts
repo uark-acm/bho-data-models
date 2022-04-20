@@ -86,31 +86,30 @@ export interface Order {
   clothingItemId: number;
 }
 export const OrderToRow = (order: Order): any[] => {
-    const row = [
-        order.id,
-        order.pickupDateTime,
-        order.returnDateTime,
-        order.clientName,
-        order.clientEmail,
-        order.checkoutAssociate,
-        order.checkinAssociate,
-        order.clothingItemId,
-    ];
-    return row;
+  const row = [
+    order.id,
+    order.pickupDateTime,
+    order.returnDateTime,
+    order.clientName,
+    order.clientEmail,
+    order.checkoutAssociate,
+    order.checkinAssociate,
+    order.clothingItemId,
+  ];
+  return row;
 };
 export const RowToOrder = (databaseResponse: any[]): Order => {
-    return {
-      id: databaseResponse[0],
-      pickupDateTime: databaseResponse[1] ? new Date(databaseResponse[1]) : null,
-      returnDateTime: databaseResponse[2] ?  new Date(databaseResponse[2]) : null,
-      clientName: databaseResponse[3],
-      clientEmail: databaseResponse[4],
-      checkoutAssociate: databaseResponse[5],
-      checkinAssociate: databaseResponse[6],
-      clothingItemId: databaseResponse[7]
-    };
+  return {
+    id: databaseResponse[0],
+    pickupDateTime: databaseResponse[1] ? new Date(databaseResponse[1]) : null,
+    returnDateTime: databaseResponse[2] ? new Date(databaseResponse[2]) : null,
+    clientName: databaseResponse[3],
+    clientEmail: databaseResponse[4],
+    checkoutAssociate: databaseResponse[5],
+    checkinAssociate: databaseResponse[6],
+    clothingItemId: databaseResponse[7],
   };
-
+};
 
 // requests
 export interface CreateClothingItemRequest {
