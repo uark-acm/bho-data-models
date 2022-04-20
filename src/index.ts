@@ -143,8 +143,19 @@ export interface CreateClothingItemRequest {
 
 export interface CreateOrderRequest {
   pickupDateTime: Date;
-  returnDateTime: Date;
+  checkoutAssociate: string;
   clientName: string;
   clientEmail: string;
-  checkoutAssociate: string;
+  clothingItemId: number;
+}
+
+export interface Order {
+  id: number;
+  pickupDateTime: Date | null;
+  returnDateTime: Date | null;
+  clientName: string;
+  clientEmail: string;
+  checkoutAssociate: string | null; // will suffice as confirmation
+  checkinAssociate: string | null; // will suffice as confirmation
+  clothingItemId: number;
 }
